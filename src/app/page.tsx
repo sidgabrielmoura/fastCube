@@ -1,19 +1,16 @@
-import { Footer } from "@/components/footer";
 import { CardsHome } from "@/components/homeCards";
 
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="w-[100%] h-screen bg-[#ffe7ff] flex items-center justify-center">
         <div>
-          <h1>qual etapa você quer aprender?</h1>
+          <h1 className="text-[30px] text-center font-bold mb-[87px]">qual etapa você quer aprender?</h1>
 
           <div>
             <CardsHome/>
           </div>
         </div>
-
-        <Footer/>
       </main>
     </>
   )

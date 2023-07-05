@@ -1,8 +1,7 @@
 import './globals.css'
-import { Roboto, Nunito } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 
-const roboto = Roboto({ subsets: ['latin'],weight: ["300", "400", "500"], variable: "--font-alt" })
-const nunito = Nunito({ subsets: ['latin'], weight: ["300", "400", "500", "600"], variable: "--font-sans" })
+const nunito = Nunito({ subsets: ['latin'], weight: ["300", "400", "500", "600", "700" ,"800"], variable: "--font-sans" })
 
 export const metadata = {
   title: 'fastCube website',
@@ -16,7 +15,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${roboto.className} ${nunito.className} font-sans`}>{children}</body>
+      <body className={nunito.className}>
+            <main className="w-[100%] h-[30px] bg-[#8c6bfc] fixed bottom-0 flex items-center 
+            justify-center z-10">
+                <h1 className="text-white font-medium text-[17px]">© Sid Gabriel. Todos Os Direitos Reservados</h1>
+            </main>
+
+        {children}
+      </body>
     </html>
   )
 }
