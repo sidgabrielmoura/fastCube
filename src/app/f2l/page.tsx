@@ -6,7 +6,7 @@ export default function F2lPage(){
         <>
             <Navbar/>
             <main className="flex flex-col ">  
-                <section className="w-[100%] h-[15vh] flex items-center justify-center">
+                <section className="w-[100%] h-[15vh] flex items-center justify-center mt-12">
                     <h1 className="text-[28px] text-neutral-800 font-extrabold">F2L PAGE</h1>
                 </section>
 
