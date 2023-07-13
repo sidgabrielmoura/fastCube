@@ -1,362 +1,803 @@
-"use client"
 export function CardsOll(){
-    const cubeList = [
-        {
-            url: "http://localhost:3000/oll-caso-01.webp",
-            name: "caso 01",
-            algorithmn: "R U R' U R U2 R'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-02.webp",
-            name: "caso 02",
-            algorithmn: "R' U' R U' R' U2 R"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-03.webp",
-            name: "caso 03",
-            algorithmn: "R U R' U R U' R' U R U2 R'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-04.webp",
-            name: "caso 04",
-            algorithmn: "R U2 R2 U' R2 U' R2 U2 R"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-05.webp",
-            name: "caso 05",
-            algorithmn: "Rw U R’ U’ Rw’ F R F’"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-06.webp",
-            name: "caso 06",
-            algorithmn: "F' Rw U R' U' Rw' F R"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-07.webp",
-            name: "caso 07",
-            algorithmn: "R2 D' R U2 R' D R U2 R"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-08.webp",
-            name: "caso 08",
-            algorithmn: "R U R' U' R' F R F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-09.webp",
-            name: "caso 09",
-            algorithmn: "F R U R' U' F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-10.webp",
-            name: "caso 10",
-            algorithmn: "Rw U2 R' U' R U' Rw'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-11.webp",
-            name: "caso 11",
-            algorithmn: "Rw' U2 R U R' U Rw"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-12.webp",
-            name: "caso 12",
-            algorithmn: "Fw R U R' U' Fw'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-13.webp",
-            name: "caso 13",
-            algorithmn: "Fw' L' U' L U Fw"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-14.webp",
-            name: "caso 14",
-            algorithmn: "S R U R' U' R' F R Fw'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-15.webp",
-            name: "caso 15",
-            algorithmn: "R' U' F U R U' R' F' R"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-16.webp",
-            name: "caso 16",
-            algorithmn: "Rw U R' U' M U R U' R'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-17.webp",
-            name: "caso 17",
-            algorithmn: "R U R' U' M' U R U' Rw'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-18.webp",
-            name: "caso 18",
-            algorithmn: "R' U' R' F R F' U R"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-19-.webp",
-            name: "caso 19",
-            algorithmn: "R U R2 U' R' F R U R U' F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-20.webp",
-            name: "caso 20",
-            algorithmn: "F R U' R' U' R U R' F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-21.webp",
-            name: "caso 21",
-            algorithmn: "R U2 R2 F R F' R U2 R'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-22.webp",
-            name: "caso 22",
-            algorithmn: "R U R' U R' F R F' R U2 R'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-23-.webp",
-            name: "caso 23",
-            algorithmn: "R U R' U' R' F R2 U R' U' F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-24.webp",
-            name: "caso 24",
-            algorithmn: "Rw U R' U R U2 Rw'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-25.webp",
-            name: "caso 25",
-            algorithmn: "Rw' U' R U' R' U2 Rw"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-26.webp",
-            name: "caso 26",
-            algorithmn: "Rw' R2 U R' U R U2 R' U M'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-27.webp",
-            name: "caso 27",
-            algorithmn: "F R U R' U' F' UF R U R' U' F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-28.webp",
-            name: "caso 28",
-            algorithmn: "Rw' U' R U' R' UR U' R' U2 Rw"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-29.webp",
-            name: "caso 29",
-            algorithmn: "Rw U R' U R U'R' U R U2 Rw'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-30.webp",
-            name: "caso 30",
-            algorithmn: "Rw U' Rw2 U Rw2U Rw2 U' Rw"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-31.webp",
-            name: "caso 31",
-            algorithmn: "Rw' U Rw2 U' Rw2U' Rw2 U Rw'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-32.webp",
-            name: "caso 32",
-            algorithmn: "F' L' U' L U L' U' L U F"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-33.webp",
-            name: "caso 33",
-            algorithmn: "F R U R' U' R U R' U' F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-34.webp",
-            name: "caso 34",
-            algorithmn: "R U R' U R U' R' U' R' F R F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-35.webp",
-            name: "caso 35",
-            algorithmn: "L' U' L U' L' U L U L F' L' F"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-36.webp",
-            name: "caso 36",
-            algorithmn: "R' F R U R' F' R F U' F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-37.webp",
-            name: "caso 37",
-            algorithmn: "Rw U' Rw' U' Rw U Rw' F' U F"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-38.webp",
-            name: "caso 38",
-            algorithmn: "Rw' U' Rw R' U' R U Rw' U Rw"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-39.webp",
-            name: "caso 39",
-            algorithmn: "Rw U Rw' R U R' U' Rw U' Rw'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-40.webp",
-            name: "caso 40",
-            algorithmn: "Fw R U R' U' R U R' U' Fw'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-41.webp",
-            name: "caso 41",
-            algorithmn: "Rw U Rw' U R U' R' U R U' R' Rw U' Rw'"
-        },
-
-        {
-            url: "http://localhost:3000/oll-caso-42.webp",
-            name: "caso 42",
-            algorithmn: "R U R' U R Dw' R U' R' F'"
-        },
-
-        {
-            url: "http://localhost:3000/oll-caso-43.webp",
-            name: "caso 43",
-            algorithmn: "R U2 R2 U' R U' R' U2 F R F'"
-        },
-
-        {
-            url: "http://localhost:3000/oll-caso-44.webp",
-            name: "caso 44",
-            algorithmn: "R' U' R U' R' U2 R F R U R' U' F'"
-        },
-
-        {
-            url: "http://localhost:3000/oll-caso-45.webp",
-            name: "caso 45",
-            algorithmn: "R U R' U R U2 R' F R U R' U' F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-46.webp",
-            name: "caso 46",
-            algorithmn: "M U R U R' U' R' F R F' M'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-47.webp",
-            name: "caso 47",
-            algorithmn: "F U R U2 R' U' R U2 R' U' F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-48.webp",
-            name: "caso 48",
-            algorithmn: "L F' L' U' L U F U' L'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-49.webp",
-            name: "caso 49",
-            algorithmn: "R' F R U R' U' F' U R"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-50.webp",
-            name: "caso 50",
-            algorithmn: "Rw U R' U R U2 Rw2 U' R U' R' U2 Rw"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-51.webp",
-            name: "caso 51",
-            algorithmn: "M U R U R' U' M' R' F R F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-52.webp",
-            name: "caso 52",
-            algorithmn: "Fw R U R' U' Fw' U' F R U R' U' F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-53.webp",
-            name: "caso 53",
-            algorithmn: "Fw R U R' U' Fw' U F R U R' U' F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-54.webp",
-            name: "caso 54",
-            algorithmn: "R U2 R2' F R F' U2' R' F R F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-55.webp",
-            name: "caso 55",
-            algorithmn: "F R U R' U' S R U R' U' Fw"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-56.webp",
-            name: "caso 56",
-            algorithmn: "R U R' U R' F R F' U2 R' F R F'"
-        },
-        
-        {
-            url: "http://localhost:3000/oll-caso-57.webp",
-            name: "caso 57",
-            algorithmn: "M U R U R' U' M2 U R U' Rw'"
-        },
-        
-            ]
     return(
+        <>
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-01.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 01</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U R'</p>
+        </div>
 
-        <>       
-        {
-            cubeList.map(({url, name, algorithmn}) => (
-                <div key={name} className="w-[218px]">
-                    
-                    <img src={url} alt="" className="w-[217px] h-[217px]"/> 
-                    <h1 className="text-[24px] font-bold">{name}</h1>
-                    <p className="text-[20px] font-extrabold text-neutral-400 pb-10">{algorithmn}</p>
-                </div>
-            ))
-        }
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-02.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 02</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">y L' U' L</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-03.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 03</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">y U' L' U L</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-04.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 04</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U R U' R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-05.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 05</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U R U' R' U' F' U F</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-06.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 06</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">y U' L' U L U F U' F'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-07.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 07</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U' R' DwR' U2 R U2' R' U R</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-08.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 08</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U R U R' U2 R U R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-09.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 09</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U' R U' R' U2 R U' R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-10.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 10</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U2 R' F R F' U2 R U R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-11.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 11</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U' R U R' U F' U' F</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-12.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 12</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U R' U' R U R' U' R U R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-13.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 13</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U' R' F R F' R U' R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-14.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 14</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U' R' U R U' R' U2 R U' R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-15.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 15</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U' R U2 R' U F' U' F</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-16.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 16</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U' R U' R' U R U R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-17.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 17</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">y' U R' U R U' R' U' R</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-18.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 18</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U' R' U2 F' U' F</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-19-.webp)] bg-cover bg-center w-[217px] h-[217px
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 19</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U R' U2 R U' R' U R U' R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-20.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 20</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U2 R' U' R U R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-21.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 21</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">y' R' U2 R U R' U' R</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-22.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 22</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">F U R U' R' F' R U' R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-23-.webp)] bg-cover bg-center w-[217px] h-[217px
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 23</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U R' U2 R U R' U' R U R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-24.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 24</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U R' U R U' R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-25.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 25</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">y' L' U' L U' L' U L</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-26.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 26</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U2 R' U R U' R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-27.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 27</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">y' L' U2 L U' L' U L</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-28.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 28</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U' R' U R U' R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-29.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 29</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U R' U' F R' F' R</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-30.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 30</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U R' U' R U R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-31.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 31</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R' F R F' R' F R F'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-32.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 32</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U R' U2 R U' R' U R U R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-33.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 33</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U R' U' R U2 R' U' R U R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-34.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 34</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">R U' R' Rw U' Rw' U2 Rw U Rw'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-35.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 35</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">Rw U' Rw' U2 Rw U Rw' R U R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-36.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 36</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">Dw R' U2 R U2 R' U R</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-37.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 37</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U' R U2 R' U2 R U' R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-38.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 38</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">Dw R' U' R U2 R' U R</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-39.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 39</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U' R U R' U2 R U' R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-40.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 40</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px]">U' R U R' U R U R'</p>
+        </div>
+
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-41.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 41</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-42.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 42</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-43.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 43</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-44.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 44</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-45.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 45</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-46.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 46</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-47.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 47</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-48.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 48</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-49.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 49</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-50.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 50</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-51.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 51</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-52.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 52</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-53.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 53</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-54.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 54</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-55.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 55</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-56.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 56</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
+        
+        <div className="xl:w-[217px]
+                        md:w-[190px]
+                        sm:w-[140px]">
+            <div className="bg-[url(../assets/oll-caso-57.webp)] bg-cover bg-center w-[217px] h-[217px]
+            xl:w-[217px] xl:h-[217px]
+            md:w-[190px] md:h-[190px]
+            sm:w-[140px] sm:h-[140px]"/>
+            <h1 className="text-[24px] font-bold">caso 57</h1>
+            <p className="text-[20px] font-extrabold text-neutral-400
+            xl:text-[20px]
+            md:text-[18px]
+            sm:text-[14px] pb-12">U' R U' R' U F' U' F</p>
+        </div>
 
         </>
     )

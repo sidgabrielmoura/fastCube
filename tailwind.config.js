@@ -16,7 +16,19 @@ module.exports = {
         sans: "var(--font-sans)",
         alt: "var(--font-alt)"
       },
-     
+      screens: {
+        'sm': '320px',
+        // => @media (min-width: 320px) { ... }
+        
+        'md': '640px',
+        // => @media (min-width: 640px) { ... }
+  
+        'xl': '1024px',
+        // => @media (min-width: 1024px) { ... }
+  
+        '2xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+      }
     },
   },
   plugins: [],
